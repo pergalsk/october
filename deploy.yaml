@@ -2,28 +2,31 @@ import:
   - recipe/laravel.php
 
 config:
-  repository: ''
+  appliaction: 'october'
+  repository: 'git@github.com:pergalsk/october.git'
 
 hosts:
-  patmos.sk:
-    remote_user: deployer
-    deploy_path: '~/october'
+  prod:
+    remote_user: uid137103
+    hostname: 'shellserver-4.websupport.sk'
+    port: 26947
+    deploy_path: '~/patmos.sk/sub/test'
 
 tasks:
   deploy:
     - deploy:prepare
     - deploy:vendors
-    - artisan:storage:link
-    - artisan:view:cache
-    - artisan:config:cache
+#    - artisan:storage:link
+#    - artisan:view:cache
+#    - artisan:config:cache
 
-    - artisan:down
-    - artisan:migrate
-    - artisan:up
-    - npm:install
-    - npm:run:prod
+#    - artisan:down
+#    - artisan:migrate
+#    - artisan:up
+#    - npm:install
+#    - npm:run:prod
 
-    - deploy:publish
+#    - deploy:publish
 #    - php-fpm:reload
   npm:run:prod:
     script:
