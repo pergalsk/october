@@ -8,8 +8,9 @@ config:
 hosts:
   prod:
     remote_user: uid137103
+    http_user: uid137103
     hostname: 'shellserver-2.websupport.sk'
-    port: 27477
+    port: 27197
     deploy_path: '~/patmos.sk/sub/test'
 
 tasks:
