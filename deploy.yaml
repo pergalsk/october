@@ -12,10 +12,11 @@ hosts:
     hostname: 'shellserver-2.websupport.sk'
     port: 27197
     deploy_path: '~/patmos.sk/sub/test'
+    writable_mode: 'chmod'
 
 tasks:
   deploy:
-    - install:acl
+#    - install:acl
     - deploy:prepare
     - deploy:vendors
 #    - artisan:storage:link
