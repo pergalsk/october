@@ -35,6 +35,6 @@ tasks:
       - 'cd {{release_path}} && npm run prod'
   install:acl:
     script:
-      - 'sudo apt-get install acl'
+      - 'apt-get install acl'
 after:
   deploy:failed: deploy:unlock
